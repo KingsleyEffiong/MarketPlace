@@ -56,7 +56,7 @@ function MarketPlaceCategory() {
 
   const baseVelocity = -40; // scroll speed
   const x = useRef(0);
-  const containerRef = useRef(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useAnimationFrame((t, delta) => {
     if (!containerRef.current) return;
