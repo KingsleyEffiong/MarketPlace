@@ -5,7 +5,20 @@ import { ShoppingCart, Heart } from "lucide-react";
 import Image from "next/image";
 import { Stars } from "./StarProductRating";
 
-export function ProductCard({ product }: any) {
+export interface Product {
+  id: string;
+  title: string;
+  vendor: string;
+  category: string[];
+  price: number;
+  rating: number;
+  sizes?: (number | string)[];
+  image: string;
+  inStock: boolean;
+  onSale: boolean;
+}
+
+export function ProductCard({ product }: { product: Product }) {
   function formatCurrency(n: number) {
     return `₦${n.toFixed(2)}`;
   }

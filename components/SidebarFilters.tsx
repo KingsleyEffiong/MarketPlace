@@ -8,7 +8,7 @@ interface SidebarFiltersProps {
   onChangePrice: (range: [number, number]) => void;
   sizes: number[];
   selectedSizes: number[];
-  onToggleSize: (size: any) => void;
+  onToggleSize: (size: number) => void;
   inStockOnly: boolean;
   onToggleInStock: (value: boolean) => void;
   onClearFilters: () => void;
