@@ -28,8 +28,8 @@
 
 body {
   background: var(--background);
-  color: var(--foreground);
-  font-family: "MyFont", sans-serif; /* 👈 updated to use your font */
+  font-family: "MyFont", sans-serif;
+  height: 100vh;
 }
 
 .perspective {
