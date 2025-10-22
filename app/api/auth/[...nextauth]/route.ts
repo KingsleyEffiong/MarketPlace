@@ -1,9 +1,9 @@
-// app/api/auth/[...nextauth]/route.ts
 import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import connectToDB from "@/utils/database";
 import User from "@/model/user";
 import { GOOGLE_CLIENT_SECRET, GOOGLE_ID } from "@/config/env";
+
 const handler = NextAuth({
   providers: [
     GoogleProvider({
@@ -45,7 +45,9 @@ const handler = NextAuth({
     },
 
     async session({ session, token }) {
-      session.user.email = token.email;
+      if (session.user && token.email) {
+        session.user.email = token.email;
+      }
       return session;
     },
   },
