@@ -37,10 +37,10 @@ export function SidebarFilters({
         <ul className="space-y-1">
           <li
             onClick={() => onSelectCategory("All")}
-            className={`cursor-pointer text-sm px-2 py-1 rounded-md ${
+            className={`cursor-pointer text-sm px-2 py-1 rounded-full ${
               selectedCategory === "All"
                 ? "bg-indigo-600 text-white font-medium"
-                : "hover:bg-gray-100 text-gray-700"
+                : "hover:bg-gray-100 text-gray-700 rounded-full"
             }`}
           >
             All categories
@@ -49,7 +49,7 @@ export function SidebarFilters({
             <li
               key={cat}
               onClick={() => onSelectCategory(cat)}
-              className={`cursor-pointer text-sm px-2 py-1 rounded-md ${
+              className={`cursor-pointer text-sm px-2 py-1 rounded-full ${
                 selectedCategory === cat
                   ? "bg-indigo-600 text-white font-medium"
                   : "hover:bg-gray-100 text-gray-700"

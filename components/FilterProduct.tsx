@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useMemo, useState } from "react";
-import { Search, Package } from "lucide-react"; // Package icon for empty state
+import { Search, Package } from "lucide-react";
 import { ProductCard } from "./ProductCard";
 import { SidebarFilters } from "./SidebarFilters";
 import { SAMPLE_PRODUCTS } from "@/data/ProductData";
@@ -132,7 +132,7 @@ export default function ProductCatalogPage() {
           <div
             className={
               view === "grid"
-                ? "grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6"
+                ? "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 auto-rows-fr"
                 : "flex flex-col gap-4"
             }
           >

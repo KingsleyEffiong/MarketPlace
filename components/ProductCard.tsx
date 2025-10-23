@@ -67,7 +67,7 @@ export function ProductCard({ product }: { product: Product }) {
       <div className="mt-5 flex items-center gap-2">
         <button
           disabled={!product.inStock}
-          className={`w-full flex items-center justify-center gap-2 text-sm font-medium py-2.5 rounded-xl transition-all duration-300 ${
+          className={`w-full flex items-center justify-center gap-2 text-sm font-medium py-2.5 rounded-full transition-all duration-300 ${
             product.inStock
               ? "bg-gradient-to-r from-indigo-600 to-blue-600 text-white hover:from-indigo-500 hover:to-blue-500 shadow-sm"
               : "bg-gray-100 text-gray-400 cursor-not-allowed"
